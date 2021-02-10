@@ -9,6 +9,11 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
 
+/*Add title & icon
+ * Add margins in all labels
+ * Make the receipt NOT print unless something (maybe change label has text in it)*/
+
+
 namespace CashRegister
 {
     public partial class Form1 : Form
@@ -146,6 +151,9 @@ namespace CashRegister
             tenderInput.Text = "";
             totalsOutput.Text = "";
             changeOutput.Text = "";
+            leftReceiptOutput.Text = "";
+            rightReceiptOutput.Text = "";
+            goodDayLabel.Text = "";
         }
     }
 }

@@ -29,6 +29,7 @@ namespace CashRegister
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.totalButton = new System.Windows.Forms.Button();
             this.cardInput = new System.Windows.Forms.TextBox();
             this.phoneInput = new System.Windows.Forms.TextBox();
@@ -259,8 +260,9 @@ namespace CashRegister
             this.Controls.Add(this.phoneInput);
             this.Controls.Add(this.cardInput);
             this.Controls.Add(this.totalButton);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Cash Register System";
             this.ResumeLayout(false);
             this.PerformLayout();
 
