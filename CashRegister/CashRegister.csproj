@@ -92,5 +92,8 @@
   <ItemGroup>
     <None Include="Resources\[ONTIVA.COM]-Cash Register %28Kaching%29 - Sound Effect %28HD%29-HQ.wav" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Computer Error-SoundBible.com-1655839472.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

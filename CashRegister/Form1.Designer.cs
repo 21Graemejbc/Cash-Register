@@ -40,7 +40,6 @@ namespace CashRegister
             this.reorderButton = new System.Windows.Forms.Button();
             this.leftReceiptOutput = new System.Windows.Forms.Label();
             this.totalsOutput = new System.Windows.Forms.Label();
-            this.divider = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.changeOutput = new System.Windows.Forms.Label();
             this.banner = new System.Windows.Forms.Label();
@@ -58,9 +57,9 @@ namespace CashRegister
             // totalButton
             // 
             this.totalButton.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalButton.Location = new System.Drawing.Point(16, 142);
+            this.totalButton.Location = new System.Drawing.Point(15, 142);
             this.totalButton.Name = "totalButton";
-            this.totalButton.Size = new System.Drawing.Size(395, 38);
+            this.totalButton.Size = new System.Drawing.Size(396, 38);
             this.totalButton.TabIndex = 0;
             this.totalButton.Text = "Calculate Total";
             this.totalButton.UseVisualStyleBackColor = true;
@@ -69,27 +68,27 @@ namespace CashRegister
             // cardLabel
             // 
             this.cardLabel.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cardLabel.Location = new System.Drawing.Point(12, 61);
+            this.cardLabel.Location = new System.Drawing.Point(16, 61);
             this.cardLabel.Name = "cardLabel";
-            this.cardLabel.Size = new System.Drawing.Size(316, 20);
+            this.cardLabel.Size = new System.Drawing.Size(312, 20);
             this.cardLabel.TabIndex = 4;
             this.cardLabel.Text = "GTX 3080 Graphics Cards:";
             // 
             // phoneLabel
             // 
             this.phoneLabel.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.phoneLabel.Location = new System.Drawing.Point(12, 86);
+            this.phoneLabel.Location = new System.Drawing.Point(16, 86);
             this.phoneLabel.Name = "phoneLabel";
-            this.phoneLabel.Size = new System.Drawing.Size(352, 20);
+            this.phoneLabel.Size = new System.Drawing.Size(348, 20);
             this.phoneLabel.TabIndex = 6;
             this.phoneLabel.Text = "Smartphones (Charger not Included)";
             // 
             // chargerLabel
             // 
             this.chargerLabel.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chargerLabel.Location = new System.Drawing.Point(12, 114);
+            this.chargerLabel.Location = new System.Drawing.Point(16, 114);
             this.chargerLabel.Name = "chargerLabel";
-            this.chargerLabel.Size = new System.Drawing.Size(352, 20);
+            this.chargerLabel.Size = new System.Drawing.Size(348, 20);
             this.chargerLabel.TabIndex = 8;
             this.chargerLabel.Text = "Phone Chargers";
             // 
@@ -98,7 +97,7 @@ namespace CashRegister
             this.receiptButton.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.receiptButton.Location = new System.Drawing.Point(15, 404);
             this.receiptButton.Name = "receiptButton";
-            this.receiptButton.Size = new System.Drawing.Size(396, 38);
+            this.receiptButton.Size = new System.Drawing.Size(395, 38);
             this.receiptButton.TabIndex = 10;
             this.receiptButton.Text = "Print Receipt";
             this.receiptButton.UseVisualStyleBackColor = true;
@@ -107,9 +106,9 @@ namespace CashRegister
             // changeButton
             // 
             this.changeButton.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.changeButton.Location = new System.Drawing.Point(16, 328);
+            this.changeButton.Location = new System.Drawing.Point(15, 328);
             this.changeButton.Name = "changeButton";
-            this.changeButton.Size = new System.Drawing.Size(395, 38);
+            this.changeButton.Size = new System.Drawing.Size(396, 38);
             this.changeButton.TabIndex = 11;
             this.changeButton.Text = "Calculate Change";
             this.changeButton.UseVisualStyleBackColor = true;
@@ -118,16 +117,16 @@ namespace CashRegister
             // tenderLabel
             // 
             this.tenderLabel.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tenderLabel.Location = new System.Drawing.Point(12, 303);
+            this.tenderLabel.Location = new System.Drawing.Point(15, 303);
             this.tenderLabel.Name = "tenderLabel";
-            this.tenderLabel.Size = new System.Drawing.Size(75, 20);
+            this.tenderLabel.Size = new System.Drawing.Size(72, 20);
             this.tenderLabel.TabIndex = 13;
             this.tenderLabel.Text = "Tender:";
             // 
             // reorderButton
             // 
             this.reorderButton.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.reorderButton.Location = new System.Drawing.Point(16, 450);
+            this.reorderButton.Location = new System.Drawing.Point(15, 450);
             this.reorderButton.Name = "reorderButton";
             this.reorderButton.Size = new System.Drawing.Size(395, 38);
             this.reorderButton.TabIndex = 15;
@@ -139,17 +138,17 @@ namespace CashRegister
             // 
             this.leftReceiptOutput.BackColor = System.Drawing.Color.LightSkyBlue;
             this.leftReceiptOutput.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.leftReceiptOutput.Location = new System.Drawing.Point(428, 58);
+            this.leftReceiptOutput.Location = new System.Drawing.Point(428, 61);
             this.leftReceiptOutput.Name = "leftReceiptOutput";
             this.leftReceiptOutput.Padding = new System.Windows.Forms.Padding(5);
-            this.leftReceiptOutput.Size = new System.Drawing.Size(229, 289);
+            this.leftReceiptOutput.Size = new System.Drawing.Size(229, 286);
             this.leftReceiptOutput.TabIndex = 16;
             // 
             // totalsOutput
             // 
             this.totalsOutput.BackColor = System.Drawing.Color.LightSkyBlue;
             this.totalsOutput.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalsOutput.Location = new System.Drawing.Point(16, 185);
+            this.totalsOutput.Location = new System.Drawing.Point(15, 185);
             this.totalsOutput.Margin = new System.Windows.Forms.Padding(3);
             this.totalsOutput.Name = "totalsOutput";
             this.totalsOutput.Padding = new System.Windows.Forms.Padding(2);
@@ -157,21 +156,13 @@ namespace CashRegister
             this.totalsOutput.TabIndex = 17;
             this.totalsOutput.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // divider
-            // 
-            this.divider.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.divider.Location = new System.Drawing.Point(17, 491);
-            this.divider.Name = "divider";
-            this.divider.Size = new System.Drawing.Size(394, 10);
-            this.divider.TabIndex = 18;
-            // 
             // label1
             // 
             this.label1.BackColor = System.Drawing.SystemColors.Control;
             this.label1.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 375);
+            this.label1.Location = new System.Drawing.Point(15, 375);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(75, 20);
+            this.label1.Size = new System.Drawing.Size(72, 20);
             this.label1.TabIndex = 19;
             this.label1.Text = "Change:";
             // 
@@ -201,10 +192,10 @@ namespace CashRegister
             // 
             this.rightReceiptOutput.BackColor = System.Drawing.Color.LightSkyBlue;
             this.rightReceiptOutput.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rightReceiptOutput.Location = new System.Drawing.Point(640, 58);
+            this.rightReceiptOutput.Location = new System.Drawing.Point(640, 61);
             this.rightReceiptOutput.Name = "rightReceiptOutput";
             this.rightReceiptOutput.Padding = new System.Windows.Forms.Padding(5);
-            this.rightReceiptOutput.Size = new System.Drawing.Size(148, 289);
+            this.rightReceiptOutput.Size = new System.Drawing.Size(148, 286);
             this.rightReceiptOutput.TabIndex = 22;
             this.rightReceiptOutput.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
@@ -222,9 +213,8 @@ namespace CashRegister
             // 
             this.cardInput.Location = new System.Drawing.Point(334, 61);
             this.cardInput.Name = "cardInput";
-            this.cardInput.Size = new System.Drawing.Size(77, 20);
+            this.cardInput.Size = new System.Drawing.Size(76, 20);
             this.cardInput.TabIndex = 24;
-            this.cardInput.ValueChanged += new System.EventHandler(this.cardInput_ValueChanged);
             // 
             // phoneInput
             // 
@@ -261,7 +251,6 @@ namespace CashRegister
             this.Controls.Add(this.banner);
             this.Controls.Add(this.changeOutput);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.divider);
             this.Controls.Add(this.totalsOutput);
             this.Controls.Add(this.leftReceiptOutput);
             this.Controls.Add(this.reorderButton);
@@ -295,7 +284,6 @@ namespace CashRegister
         private System.Windows.Forms.Button reorderButton;
         private System.Windows.Forms.Label leftReceiptOutput;
         private System.Windows.Forms.Label totalsOutput;
-        private System.Windows.Forms.Label divider;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label changeOutput;
         private System.Windows.Forms.Label banner;
