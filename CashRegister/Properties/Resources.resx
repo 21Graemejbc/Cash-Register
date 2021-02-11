@@ -121,4 +121,10 @@
   <data name="Aha_Soft_Universal_Shop_Cash_register" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Aha-Soft-Universal-Shop-Cash-register.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Kaching" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\[ONTIVA.COM]-Cash Register (Kaching) - Sound Effect (HD)-HQ.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Receipt" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\[ONTIVA.COM]-Receipt Printer - Sound Effect HD-HQ.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>

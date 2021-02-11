@@ -1,4 +1,8 @@
-﻿using System;
+﻿/*Graeme Cook
+ * February 11
+ A program that mimics a cash register. Takes input (# of items & tender), calculates prices (with tax0 & change, prints a receipt*/
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,19 +12,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
+using System.Media;
 
-/*Add title & icon
- * Add margins in all labels
- * Make the receipt NOT print unless something (maybe change label has text in it)*/
-
+// Sequential button activation 
 
 namespace CashRegister
 {
     public partial class Form1 : Form
     {
-        //Maybe focus on first input on start??
-
-        double cardPrice= 3000;
+        double cardPrice = 3000;
         double chargerPrice = 15;
         double phonePrice = 1200;
         double taxRate = 0.13;
@@ -31,6 +31,9 @@ namespace CashRegister
         int phone = 0;
         //Declaration & setting of input variables 
 
+        int orderNum = 0;
+        //Declaration & setting of order number tracker
+
         double total = 0;
         double taxAmount = 0;
         double subTotal = 0;
@@ -38,13 +41,19 @@ namespace CashRegister
         double change = 0;
         //Declaration & setting of math/display variables
 
+        //Disable buttons at the beginning, activate in sequence 
+
         public Form1()
         {
             InitializeComponent();
+            cardInput.Focus();
+            changeButton.Enabled = false;
+            receiptButton.Enabled = false;
         }
 
         private void totalButton_Click(object sender, EventArgs e)
         {
+            SoundPlayer kaChingPlayer = new SoundPlayer(Properties.Resources.Kaching);
             try
             {
                 card = Convert.ToInt32(cardInput.Text);
@@ -55,29 +64,38 @@ namespace CashRegister
                 taxAmount = total * taxRate;
                 subTotal = total + taxAmount;
 
+                kaChingPlayer.Play();
+
                 totalsOutput.Text = $"Sub Total: {total.ToString("C")}";
                 totalsOutput.Text += $"\n\nTax: {taxAmount.ToString("C")}";
                 totalsOutput.Text += $"\n\nTotal: {subTotal.ToString("C")}";
+                changeButton.Enabled = true;
             }
             catch
             {
-                leftReceiptOutput.Text = "Please enter numbers only into the quantity selections";
+                leftReceiptOutput.Text = "Error";
             }
         }
 
         private void receiptButton_Click(object sender, EventArgs e)
         {
+            SoundPlayer receiptPlayer = new SoundPlayer(Properties.Resources.Receipt);
+            ++orderNum;
+
+            receiptPlayer.Play();
             leftReceiptOutput.Text = "Totally Legit Tech Inc.";
             Thread.Sleep(500);
             Refresh();
             leftReceiptOutput.Text += $"\n{DateTime.Now.ToString()}";
             Thread.Sleep(500);
             Refresh();
+            leftReceiptOutput.Text += $"\nOrder #{orderNum}";
             leftReceiptOutput.Text += "\n";
+            rightReceiptOutput.Text += "\n\n\n";
             if (card > 0)
             {
                 leftReceiptOutput.Text += $"\n{card} Graphics Cards";
-                rightReceiptOutput.Text += $"\n\n\n@ {cardPrice.ToString("C")}";
+                rightReceiptOutput.Text += $"\n@ {cardPrice.ToString("C")}";
                 Thread.Sleep(500);
                 Refresh();
             }
@@ -107,7 +125,7 @@ namespace CashRegister
             rightReceiptOutput.Text += $"\n{subTotal.ToString("C")}";
             Thread.Sleep(500);
             Refresh();
-            leftReceiptOutput.Text += $"\n\nTender:";
+            leftReceiptOutput.Text += $"\n\nTendered:";
             rightReceiptOutput.Text += $"\n\n{tender.ToString("C")}";
             Thread.Sleep(500);
             Refresh();
@@ -122,14 +140,18 @@ namespace CashRegister
 
         private void changeButton_Click(object sender, EventArgs e)
         {
+            SoundPlayer kaChingPlayer = new SoundPlayer(Properties.Resources.Kaching);
             try
             {
                 tender = Convert.ToDouble(tenderInput.Text);
                 change = tender - subTotal;
+                kaChingPlayer.Play();
                 changeOutput.Text = $"{change.ToString("C")}";
+                receiptButton.Enabled = true;
             }
             catch
             {
+                if (tenderInput.Text = )
                 totalsOutput.Text = "Please enter numbers only into the tender box";
             }
         }
@@ -145,15 +167,17 @@ namespace CashRegister
             tender = 0;
             change = 0;
 
-            cardInput.Text = "";
-            phoneInput.Text = "";
-            chargerInput.Text = "";
+            cardInput.Text = "0";
+            phoneInput.Text = "0";
+            chargerInput.Text = "0";
             tenderInput.Text = "";
             totalsOutput.Text = "";
             changeOutput.Text = "";
             leftReceiptOutput.Text = "";
             rightReceiptOutput.Text = "";
             goodDayLabel.Text = "";
+
+            cardInput.Focus();
         }
     }
 }

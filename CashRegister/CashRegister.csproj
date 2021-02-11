@@ -83,5 +83,14 @@
   <ItemGroup>
     <None Include="Resources\Aha-Soft-Universal-Shop-Cash-register.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cash Register Cha Ching-SoundBible.com-184076484.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\[ONTIVA.COM]-Receipt Printer - Sound Effect HD-HQ.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\[ONTIVA.COM]-Cash Register %28Kaching%29 - Sound Effect %28HD%29-HQ.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
