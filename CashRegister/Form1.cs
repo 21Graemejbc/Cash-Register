@@ -60,16 +60,23 @@ namespace CashRegister
                 phone = Convert.ToInt32(phoneInput.Text);
                 charger = Convert.ToInt32(chargerInput.Text);
 
-                total = card * cardPrice + phone * phonePrice + charger * chargerPrice;
-                taxAmount = total * taxRate;
-                subTotal = total + taxAmount;
+                if (card == 0 && phone == 0 && charger == 0)
+                {
+                    totalsOutput.Text = "Please order at least one item";
+                }
+                else
+                {
+                    total = card * cardPrice + phone * phonePrice + charger * chargerPrice;
+                    taxAmount = total * taxRate;
+                    subTotal = total + taxAmount;
 
-                kaChingPlayer.Play();
+                    kaChingPlayer.Play();
 
-                totalsOutput.Text = $"Sub Total: {total.ToString("C")}";
-                totalsOutput.Text += $"\n\nTax: {taxAmount.ToString("C")}";
-                totalsOutput.Text += $"\n\nTotal: {subTotal.ToString("C")}";
-                changeButton.Enabled = true;
+                    totalsOutput.Text = $"Sub Total: {total.ToString("C")}";
+                    totalsOutput.Text += $"\n\nTax: {taxAmount.ToString("C")}";
+                    totalsOutput.Text += $"\n\nTotal: {subTotal.ToString("C")}";
+                    changeButton.Enabled = true;
+                }
             }
             catch
             {
@@ -141,18 +148,32 @@ namespace CashRegister
         private void changeButton_Click(object sender, EventArgs e)
         {
             SoundPlayer kaChingPlayer = new SoundPlayer(Properties.Resources.Kaching);
+            leftReceiptOutput.Text = "";
+
+            if (tenderInput.Text == "")
+            {
+                leftReceiptOutput.Text = "Please enter a number for the amount          tendered";
+                return;
+            }
             try
             {
                 tender = Convert.ToDouble(tenderInput.Text);
+            }
+            catch
+            {
+                leftReceiptOutput.Text = "Please enter only numbers as the amount tendered";
+                return;
+            }
+            if (tender < subTotal)
+            {
+                leftReceiptOutput.Text = "Please enter an amount of tender greater than the total cost of the order";
+            }
+            else
+            {
                 change = tender - subTotal;
                 kaChingPlayer.Play();
                 changeOutput.Text = $"{change.ToString("C")}";
                 receiptButton.Enabled = true;
-            }
-            catch
-            {
-                if (tenderInput.Text = )
-                totalsOutput.Text = "Please enter numbers only into the tender box";
             }
         }
 
@@ -178,6 +199,9 @@ namespace CashRegister
             goodDayLabel.Text = "";
 
             cardInput.Focus();
+
+            changeButton.Enabled = false;
+            receiptButton.Enabled = false;
         }
     }
 }

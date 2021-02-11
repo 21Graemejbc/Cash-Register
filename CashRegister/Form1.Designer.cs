@@ -171,7 +171,7 @@ namespace CashRegister
             this.label1.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(12, 375);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(81, 20);
+            this.label1.Size = new System.Drawing.Size(75, 20);
             this.label1.TabIndex = 19;
             this.label1.Text = "Change:";
             // 
@@ -179,10 +179,10 @@ namespace CashRegister
             // 
             this.changeOutput.BackColor = System.Drawing.Color.LightSkyBlue;
             this.changeOutput.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.changeOutput.Location = new System.Drawing.Point(211, 369);
+            this.changeOutput.Location = new System.Drawing.Point(214, 369);
             this.changeOutput.Name = "changeOutput";
             this.changeOutput.Padding = new System.Windows.Forms.Padding(2);
-            this.changeOutput.Size = new System.Drawing.Size(199, 32);
+            this.changeOutput.Size = new System.Drawing.Size(196, 32);
             this.changeOutput.TabIndex = 20;
             this.changeOutput.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -224,6 +224,7 @@ namespace CashRegister
             this.cardInput.Name = "cardInput";
             this.cardInput.Size = new System.Drawing.Size(77, 20);
             this.cardInput.TabIndex = 24;
+            this.cardInput.ValueChanged += new System.EventHandler(this.cardInput_ValueChanged);
             // 
             // phoneInput
             // 
