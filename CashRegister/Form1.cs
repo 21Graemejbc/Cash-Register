@@ -1,5 +1,5 @@
 ﻿/*Graeme Cook
- * February 11
+ * February 11 (Edited February 23)
  A program that mimics a cash register. Takes input (# of items & tender), calculates prices (with tax & change, prints a receipt*/
 
 //Using statements
