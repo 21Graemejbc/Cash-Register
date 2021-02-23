@@ -40,7 +40,7 @@ namespace CashRegister
             this.reorderButton = new System.Windows.Forms.Button();
             this.leftReceiptOutput = new System.Windows.Forms.Label();
             this.totalsOutput = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.changeLabel = new System.Windows.Forms.Label();
             this.changeOutput = new System.Windows.Forms.Label();
             this.banner = new System.Windows.Forms.Label();
             this.rightReceiptOutput = new System.Windows.Forms.Label();
@@ -156,15 +156,15 @@ namespace CashRegister
             this.totalsOutput.TabIndex = 17;
             this.totalsOutput.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label1
+            // changeLabel
             // 
-            this.label1.BackColor = System.Drawing.SystemColors.Control;
-            this.label1.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(15, 375);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(72, 20);
-            this.label1.TabIndex = 19;
-            this.label1.Text = "Change:";
+            this.changeLabel.BackColor = System.Drawing.SystemColors.Control;
+            this.changeLabel.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.changeLabel.Location = new System.Drawing.Point(15, 375);
+            this.changeLabel.Name = "changeLabel";
+            this.changeLabel.Size = new System.Drawing.Size(72, 20);
+            this.changeLabel.TabIndex = 19;
+            this.changeLabel.Text = "Change:";
             // 
             // changeOutput
             // 
@@ -250,7 +250,7 @@ namespace CashRegister
             this.Controls.Add(this.rightReceiptOutput);
             this.Controls.Add(this.banner);
             this.Controls.Add(this.changeOutput);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.changeLabel);
             this.Controls.Add(this.totalsOutput);
             this.Controls.Add(this.leftReceiptOutput);
             this.Controls.Add(this.reorderButton);
@@ -284,7 +284,7 @@ namespace CashRegister
         private System.Windows.Forms.Button reorderButton;
         private System.Windows.Forms.Label leftReceiptOutput;
         private System.Windows.Forms.Label totalsOutput;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label changeLabel;
         private System.Windows.Forms.Label changeOutput;
         private System.Windows.Forms.Label banner;
         private System.Windows.Forms.Label rightReceiptOutput;
